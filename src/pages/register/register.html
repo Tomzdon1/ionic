@@ -1,0 +1,29 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Dodaj Użytkownika</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+
+    <ion-item>
+      <ion-label floating>Login</ion-label>
+      <ion-input type="text" #username></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label floating>Hasło</ion-label>
+      <ion-input type="password" #password></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label floating>Powtórz Hasło</ion-label>
+      <ion-input type="password" #confirmPassword></ion-input>
+    </ion-item>
+
+  </ion-list>
+
+  <div padding>
+    <button block ion-button full (click)="registerUser()">Zarejestruj</button>
+  </div>
+</ion-content>

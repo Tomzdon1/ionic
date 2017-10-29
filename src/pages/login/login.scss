@@ -1,0 +1,17 @@
+page-login {
+    .scroll-content {
+        overflow: hidden;
+      }
+    #topButtons{
+        display: flex;
+    }
+    #topButtons button {
+        flex:3;
+    }
+    .item-md.item-block .item-inner {
+        border-bottom: 0px !important;
+    }
+}
+.napisLogowanie{
+    font-size: 18px !important;
+}

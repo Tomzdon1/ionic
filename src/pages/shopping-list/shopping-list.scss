@@ -1,0 +1,11 @@
+page-shopping-list {
+    .header {
+        background-color:  color($colors, primary);
+        color: color($colors, light);
+        font-size: 18px;
+     }
+ 
+     #icon-toolbar{
+        color: color($colors, light);
+     }
+}

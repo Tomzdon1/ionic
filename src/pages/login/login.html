@@ -1,0 +1,31 @@
+<ion-header>
+
+</ion-header>
+<ion-content padding>
+    <img src="img/cook.svg"/>
+
+    <ion-list>
+        
+          <ion-item>
+            <ion-input color="dark" class ='napisLogowanie' type="text" #username placeholder="Login"></ion-input>
+          </ion-item>
+        
+          <ion-item>
+            <ion-input color="dark" class ='napisLogowanie'  type="password" #password placeholder="Hasło"></ion-input>
+          </ion-item>
+        
+      </ion-list>
+      
+      <div id="topButtons">
+        <button ion-button color="button" (click)="signInUser()" >Zaloguj</button>
+        <button ion-button color="button" (click)="registerUser()" >Zarejestruj</button>
+      </div>
+
+      <ion-item>
+        <ion-label>Pamiętaj mnie</ion-label>
+        <ion-checkbox color="dark" checked="true"></ion-checkbox>
+      </ion-item>
+      <ion-label (click)="registerUser()" >Zapomniałeś Hasła?</ion-label>
+
+
+</ion-content>

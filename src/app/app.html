@@ -1,1 +1,21 @@
-<ion-nav [root]="rootPage"></ion-nav>
+<ion-menu id="authenticated" [content]="content">
+    <ion-header>
+        <ion-toolbar>
+            <div class="menu-toolbar-div">
+                <ion-icon id="icon-toolbar"name="menu" menuClose></ion-icon>
+                <ion-label>Menu</ion-label>
+            </div>
+        </ion-toolbar>
+    </ion-header>
+    <ion-content>
+        <ion-list>
+            <button class='button-content' [class.activePageHighlight]="checkActive(p)" menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
+            <ion-icon class="icon-content" name= {{p.icon}}></ion-icon>
+                {{p.title}}
+        </button>
+        </ion-list>
+    </ion-content>
+
+</ion-menu>
+
+<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>
