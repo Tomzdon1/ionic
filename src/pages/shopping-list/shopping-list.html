@@ -13,7 +13,7 @@
   </ion-navbar>
 </ion-header>
 
-<ion-content padding>
+<ion-content padding style="height: 1300px">
   <ion-item>
       <ion-input [(ngModel)] = "item.name"></ion-input>
   </ion-item>
@@ -24,11 +24,15 @@
         <ion-item>
         {{item.name}}
         </ion-item>
-          <ion-item-options side="right">
-            <button ion-button color="danger" icon-only (click)="removeItem(item.key)"><ion-icon name="trash"></ion-icon></button>
+          <ion-item-options class='item-options' side="right">
+            <button id = 'trash' ion-button color="danger" icon-only (click)="removeItem(item.key)"><ion-icon name="trash"></ion-icon></button>
           </ion-item-options>
       </ion-item-sliding>
     </ion-list>
   </ion-slides>
+
   
 </ion-content>
+<ion-footer>
+  <button class = 'footer-button' (click)="removeAll()" ion-button>Usuń Listę</button>
+</ion-footer>

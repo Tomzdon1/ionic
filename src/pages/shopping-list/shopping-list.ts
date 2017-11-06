@@ -44,4 +44,7 @@ export class ShoppingListPage {
     removeItem(items) {
       this.afDB.list('zakupy').remove(items);
     }
+    removeAll(){
+      this.afDB.list('zakupy').remove();
+    }
 }
