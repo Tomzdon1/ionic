@@ -7,6 +7,7 @@ import { HomePage } from '../pages/home/home';
 import { LoginPage } from '../pages/login/login';
 import { ShoppingListPage } from '../pages/shopping-list/shopping-list';
 import { AddRecipePage } from '../pages/add-recipe/add-recipe';
+import { ListRecipePage } from '../pages/list-recipe/list-recipe';
 
 @Component({
   templateUrl: 'app.html'
@@ -24,7 +25,8 @@ export class MyApp {
     this.menuCtrl.enable(false, 'authenticated');
     this.pages = [
       { icon:'list-box', title: 'Lista zakupów', component: ShoppingListPage },
-      { icon:'add', title: 'Dodaj Przepis', component: AddRecipePage }
+      { icon:'add', title: 'Dodaj Przepis', component: AddRecipePage },
+      { icon:'list', title: 'Lista Przepisów', component: ListRecipePage }
     ];
     this.activePage = this.pages[0];
 

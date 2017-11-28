@@ -24,7 +24,7 @@ export class ShoppingListPage {
   
     constructor(public navCtrl: NavController, public afDB: AngularFireDatabase) {
       this.items = afDB.list('zakupy').valueChanges();
-      this.items2 =afDB.list('zakupy').snapshotChanges().map(changes => {
+      this.items2 = afDB.list('zakupy').snapshotChanges().map(changes => {
         return changes.map(c=>({
           key : c.payload.key, ...c.payload.val()
        

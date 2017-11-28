@@ -10,6 +10,7 @@ import { LoginPage } from '../pages/login/login';
 import { ShoppingListPage } from '../pages/shopping-list/shopping-list';
 import { AddRecipePage } from '../pages/add-recipe/add-recipe';
 import { RegisterPage } from '../pages/register/register';
+import { ListRecipePage } from '../pages/list-recipe/list-recipe';
 
 import { AngularFireModule } from 'angularfire2';
 import { AngularFireAuthModule } from 'angularfire2/auth';
@@ -34,7 +35,8 @@ const firebaseAuth = {
     LoginPage,
     RegisterPage,
     ShoppingListPage,
-    AddRecipePage
+    AddRecipePage,
+    ListRecipePage
   ],
   imports: [
     BrowserModule,
@@ -50,7 +52,8 @@ const firebaseAuth = {
     LoginPage,
     RegisterPage,
     ShoppingListPage,
-    AddRecipePage
+    AddRecipePage,
+    ListRecipePage
   ],
   providers: [
     StatusBar,

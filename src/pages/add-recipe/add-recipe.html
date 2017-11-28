@@ -5,12 +5,33 @@
   Ionic pages and navigation.
 -->
 <ion-header>
+    <ion-navbar>
     <button ion-button icon-only menuToggle>
-      <ion-icon name="menu"></ion-icon>
+      <ion-icon id="icon-toolbar" name="menu"></ion-icon>
     </button>
+    Dodaj przepis
+  </ion-navbar>
   </ion-header>
 
 
 <ion-content padding>
-add
+    <ion-item>
+        <ion-input placeholder="Tytuł" [(ngModel)] = "item.tytul"></ion-input>
+    </ion-item>
+
+      <ion-item class="text" *ngFor="let item2 of skladniki">
+          <ion-label>{{item2}}</ion-label> 
+          <ion-checkbox  class = 'checkbox-recipe' (click)="removeItem(item2)" checked="true"></ion-checkbox>
+      </ion-item>
+
+            <ion-item>
+               <button (click)="btnAddClicked()" ion-button>Dodaj</button>
+            </ion-item>
+    <ion-item>
+        <ion-textarea placeholder="Sposób przygotowania" [ngModelOptions]="{standalone: true}" class = 'textarea-content' [(ngModel)]="item.prepere" name="description"></ion-textarea>
+    </ion-item>
+
 </ion-content>
+<ion-footer>
+    <button class = 'footer-button' (click)="addRecipe(item)" ion-button>Dodaj przepis</button>
+  </ion-footer>
